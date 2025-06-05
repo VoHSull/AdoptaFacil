@@ -1,0 +1,329 @@
+:root {
+  --main-color: #35befb;
+  --second-color: #ffdd5e;
+  --text-dark: #222;
+  --bg-light: #fdfdfd;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo + h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px; /* Espacio entre tarjetas */
+  padding: 40px; /* Espacio alrededor del grid */
+  justify-items: center; /* Centra las tarjetas */
+}
+
+.card-animal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+  height: 94%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+
+.card-animal:hover {
+  transform: translateY(-5px);
+}
+
+.card-animal img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.card-animal h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+.card-animal p {
+  margin: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.card-animal .btn {
+  margin: 1rem;
+}
+
+
+.card-animal p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.detalle-card {
+  display: flex;
+  flex-wrap: wrap; /* permite adaptar en pantallas pequeñas */
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  text-align: left;
+}
+
+.detalle-card img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.detalle-card > div {
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.btn {
+  background-color: var(--second-color);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #fcd847;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Estilo para avatar en perfil */
+.perfil-card {
+  text-align: center;
+}
+
+.perfil-card .avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--main-color);
+}
+
+/* Estilos para historial de adopciones */
+
+.lista-historial {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historial-item {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.historial-fecha {
+  background: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.7rem;
+  min-width: 110px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.historial-detalles {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.historial-detalles a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.historial-detalles a:hover {
+  text-decoration: underline;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-wrapper .avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  box-shadow: var(--shadow);
+  display: block;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.avatar-wrapper .avatar:hover {
+  filter: brightness(0.85);
+}
+
+.cambiar-foto-btn {
+  margin-top: 0.8rem;
+  display: inline-block;
+  background-color: var(--second-color);
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.cambiar-foto-btn:hover {
+  background-color: #fcd847;
+}
+
+/* Perfil info */
+.perfil-info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.perfil-info p {
+  margin: 0.3rem 0;
+}
+
+footer {
+  background-color: #35befb; /* Color principal */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+

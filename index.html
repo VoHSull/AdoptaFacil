@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdoptaFacil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container" onclick="showSection('inicio')">
+      <img src="img/logoPet.svg" alt="Logo AdoptaFacil" class="logo" />
+      <h1>AdoptaFacil</h1>
+    </div>
+    <nav>
+      <a onclick="showSection('inicio')">Inicio</a>
+      <a onclick="showSection('perfil')">Perfil</a>
+      <a onclick="showSection('disponibles')">Mascotas Disponibles</a>
+      <a onclick="showSection('historial')">Historial</a>
+      <a onclick="showSection('publicar')">Publicar Mascota</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="active section">
+      <div class="card">
+        <h2>Bienvenido a AdoptaFacil</h2>
+        <p>Este proyecto busca conectar mascotas con personas que deseen darles un nuevo hogar lleno de amor.</p>
+      </div>
+</div>
+
+      <div id="galeriaInicio" class="galeria-grid"></div>
+    </section>
+
+    <section id="perfil" class="section">
+      <div class="card perfil-card">
+        <h2>Perfil del Usuario</h2>
+        <!-- Avatar con contenedor para cambio -->
+        <div class="avatar-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png" alt="Avatar Usuario" class="avatar" id="avatarPerfil" />
+          <label for="inputAvatar" class="btn cambiar-foto-btn" title="Cambiar foto de perfil">Cambiar foto</label>
+          <input type="file" id="inputAvatar" accept="image/*" style="display:none" />
+        </div>
+        <div class="perfil-info">
+          <p><strong>Nombre:</strong> Juan Pérez</p>
+          <p><strong>Email:</strong> juan@example.com</p>
+          <p><strong>Teléfono:</strong> +51 987654321</p>
+          <p><strong>Dirección:</strong> Av. Siempre Viva 742, Lima</p>
+          <p><strong>Miembros de la familia:</strong> 4</p>
+          <p><strong>Preferencias de adopción:</strong> Perros medianos, amigables con niños</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="disponibles" class="section">
+      <div class="card">
+        <h2>Mascotas Disponibles</h2>
+        <div id="galeriaDisponibles" class="galeria-grid"></div>
+      </div>
+    </section>
+
+    <section id="detalle" class="section">
+      <div class="card detalle-card" id="detalleContenido"></div>
+    </section>
+
+    <section id="historial" class="section">
+      <div class="card">
+        <h2>Historial de Adopciones</h2>
+        <ul id="listaHistorial"></ul>
+      </div>
+    </section>
+
+    <section id="publicar" class="section">
+      <div class="card">
+        <h2>Publicar Mascota</h2>
+        <form id="formPublicar">
+          <input type="text" id="inputNombre" placeholder="Nombre de la mascota" required />
+          <input type="number" id="inputEdad" placeholder="Edad (en años)" required min="0" />
+          <input type="text" id="inputRaza" placeholder="Raza" required />
+          <textarea id="inputDescripcion" placeholder="Descripción" required></textarea>
+          <input type="file" id="imagenInput" accept="image/*" />
+          <img id="imagenPreview" style="display:none; max-width:200px; margin-bottom:1rem;" alt="Vista previa" />
+          <button type="submit" class="btn">Publicar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 AdoptaFacil. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
