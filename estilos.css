@@ -1,0 +1,101 @@
+:root {
+    --main-color: #35befb;
+    --second-color: #ffdd5e;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('img/fondo_Ado.png');
+}
+
+ nav {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    border-radius: 5px;
+  }
+  
+.titulo {
+  color: white;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+.mascota-detalle {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color:  #f8f9fa;
+  border-left: 6px solid #0d6efd; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.mascota-detalle h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mascota-detalle p {
+  color: #343a40;
+  font-size: 16px;
+}
+
+.mascota-detalle strong {
+  color: #0d6efd;
+}
+
+.descripcion-intro {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.imagen-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.imagen-container img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-mascota p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.info-mascota strong {
+  font-weight: 600;
+}
